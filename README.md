@@ -2,6 +2,8 @@
 
 The Read More Plus Plugin is a versatile and user-friendly tool designed to enhance the readability and user experience. This plugin provides a powerful "Read More" widget that allows you to create expandable sections within your application, making it easier for users to access additional content without overwhelming them.
 
+![demo](https://github.com/nishalsehan/read_more_plus/assets/44578204/4e4fecf6-c082-477c-a12c-79faacc3dcbf)
+
 ## Platform Support
 
 | **Android** | **iOS** | **Web** | **MacOS** | **Linux** | **Windows** |
@@ -64,7 +66,8 @@ ReadMore(
 )
 ```
 
-<br/>
+![customized demo](https://github.com/nishalsehan/read_more_plus/assets/44578204/2c15a613-6168-4587-8ea7-53c9c34c830a)
+
 
 | Property              | Type                      | Description                                               |
 |-----------------------|---------------------------|-----------------------------------------------------------|
