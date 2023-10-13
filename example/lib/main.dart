@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
-          textTheme: GoogleFonts.poppinsTextTheme()),
+          textTheme: GoogleFonts.poppinsTextTheme() /// imported the poppins text them to the application
+      ),
       home: const MyHomePage(title: 'Read More Example'),
     );
   }
@@ -37,6 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    /// get the size of the available screen
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
@@ -51,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             SizedBox(
               width: size.width * 0.85,
-              child: ReadMore(text: text),
+              child: ReadMore(text: text), ///use ReadMore plugin default widget
             ),
             SizedBox(
               height: size.height*0.02,
@@ -60,10 +62,11 @@ class _MyHomePageState extends State<MyHomePage> {
               width: size.width*0.85,
               child: ReadMore(
                 text: text,
-                maxLines: 3,
+                maxLines: 3, /// set the number of lines to 3
                 readMoreTextColor: Colors.redAccent,
-                expandedText: 'show less',
-                collapsedText: 'show more',
+                expandedText: 'show less', /// change the Read less label to show less
+                collapsedText: 'show more', /// change the Read more label to show more
+                ///customize the appearance of the text
                 style: Theme.of(context).textTheme.labelLarge!.copyWith(
                     color: Colors.deepPurple,
                     fontSize: size.height*0.014

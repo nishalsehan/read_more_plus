@@ -43,10 +43,7 @@ class ReadMoreState extends State<ReadMore> {
     final textPainter = TextPainter(
       text: TextSpan(text: text, style: widget.style),
       textDirection: TextDirection.ltr,
-      maxLines: widget.maxLines,
-
-      /// Limit to given line count.
-      // ellipsis: '...', /// Use an ellipsis if the text is truncated.
+      maxLines: widget.maxLines,/// Limit to given line count.
     );
 
     ///define the width
@@ -73,18 +70,19 @@ class ReadMoreState extends State<ReadMore> {
                   lastCharacterIndex < 15 ||
                   lastCharacterIndex == text.length
               ? text
-              : text.substring(0, lastCharacterIndex - 15),
+              : text.substring(0, lastCharacterIndex - 15),///display the full text if readMore status true or if text length is not enough to cover total lines
           style: widget.style ?? const TextStyle(color: Colors.black87),
           children: <TextSpan>[
             if (lastCharacterIndex != text.length)
               TextSpan(
                 text: readMore
                     ? " ${widget.expandedText ?? "read less"}"
-                    : "...${widget.collapsedText ?? "read more"}",
+                    : "...${widget.collapsedText ?? "read more"}",/// display read more and read less labels based on the readMore status
                 style: (widget.style ?? const TextStyle())
                     .copyWith(color: widget.readMoreTextColor),
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
+                  /// change the readMore status on label click
                     setState(() {
                       readMore = !readMore;
                     });
