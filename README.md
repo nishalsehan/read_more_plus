@@ -1,39 +1,59 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Read More Plus
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+The Read More Plus Plugin is a versatile and user-friendly tool designed to enhance the readability and user experience. This plugin provides a powerful "Read More" widget that allows you to create expandable sections within your application, making it easier for users to access additional content without overwhelming them.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Custom Text Styling**: Easily customize the text style of the "Read More" widget to match your application's look and feel.
 
-## Getting started
+- **Maximum Line Control**: You can define the maximum number of lines to display before the "Read More" link appears, providing you with control over the content's visibility.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- **Responsive Design**: The widget automatically adjusts to different screen sizes, ensuring a seamless experience for all users.
+
+- **Intuitive User Experience**: Improve user engagement by giving them the ability to expand or collapse sections of your application at their convenience.
+
+## Installation
+
+Add the following dependency to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  read_more_plus: ^0.0.1
+```
+
+Run `flutter pub` get to install the package.
+
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Import the package in your Dart code:
 
 ```dart
-const like = 'sample';
+import 'package:read_more_plus/read_more_plus.dart';
 ```
 
-## Additional information
+Use the ReadMore widget in your widget tree:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+ReadMore(
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+)
+```
+
+## Customization
+
+You can customize the ReadMore widget by providing different parameters to the `ReadMore` constructor:
+
+```dart
+ReadMore(
+  text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  maxLines: 3,
+  readMoreTextColor: Colors.redAccent,
+  expandedText: 'show less',
+  collapsedText: 'show more',
+  style: Theme.of(context).textTheme.labelLarge!.copyWith(
+      color: Colors.deepPurple,
+      fontSize: size.height*0.014
+  ),
+)
+```
