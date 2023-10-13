@@ -15,10 +15,9 @@ class MyApp extends StatelessWidget {
       title: 'Read More Example',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-        textTheme: GoogleFonts.poppinsTextTheme()
-      ),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+          textTheme: GoogleFonts.poppinsTextTheme()),
       home: const MyHomePage(title: 'Read More Example'),
     );
   }
@@ -33,7 +32,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ";
+  String text =
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ";
 
   @override
   Widget build(BuildContext context) {
@@ -47,10 +47,10 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             SizedBox(
-              height: size.height*0.02,
+              height: size.height * 0.02,
             ),
             SizedBox(
-              width: size.width*0.85,
+              width: size.width * 0.85,
               child: ReadMore(text: text),
             ),
             SizedBox(
