@@ -14,11 +14,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Read More Example',
       debugShowCheckedModeBanner: false,
+
+      /// assigned a custom ThemeData to the project
       theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
-          textTheme: GoogleFonts.poppinsTextTheme() /// imported the poppins text them to the application
-      ),
+          textTheme: GoogleFonts.poppinsTextTheme()
+
+          /// imported the poppins text them to the application
+          ),
       home: const MyHomePage(title: 'Read More Example'),
     );
   }
@@ -33,6 +37,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  /// sample text to use
   String text =
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ";
 
@@ -53,24 +58,30 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             SizedBox(
               width: size.width * 0.85,
-              child: ReadMore(text: text), ///use ReadMore plugin default widget
+              child: ReadMore(text: text),
+
+              ///use ReadMore plugin default widget
             ),
             SizedBox(
-              height: size.height*0.02,
+              height: size.height * 0.02,
             ),
             SizedBox(
-              width: size.width*0.85,
+              width: size.width * 0.85,
               child: ReadMore(
                 text: text,
-                maxLines: 3, /// set the number of lines to 3
+                maxLines: 3,
+
+                /// set the number of lines to 3
                 readMoreTextColor: Colors.redAccent,
-                expandedText: 'show less', /// change the Read less label to show less
-                collapsedText: 'show more', /// change the Read more label to show more
+                expandedText: 'show less',
+
+                /// change the Read less label to show less
+                collapsedText: 'show more',
+
+                /// change the Read more label to show more
                 ///customize the appearance of the text
                 style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                    color: Colors.deepPurple,
-                    fontSize: size.height*0.014
-                ),
+                    color: Colors.deepPurple, fontSize: size.height * 0.014),
               ),
             ),
           ],

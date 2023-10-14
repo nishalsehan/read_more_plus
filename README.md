@@ -26,7 +26,7 @@ Add the following dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  read_more_plus: ^0.0.1
+  read_more_plus: ^0.0.3
 ```
 
 Run `flutter pub` get to install the package.
